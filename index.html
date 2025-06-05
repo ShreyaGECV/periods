@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Cards - SQL Practice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-r from-blue-100 to-purple-100 min-h-screen flex items-center justify-center p-4">
+    <div class="container mx-auto">
+      <h1 class="text-4xl font-bold text-center mb-10 text-gray-800">SQL Task Dashboard</h1>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1 - Create Database -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+          <img src="C:\Users\ankit\OneDrive\Desktop\HTML-5\Task-18\create_lb.jpg" alt="Create Database" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h2 class="text-xl font-semibold mb-2">Create Database</h2>
+            <p class="text-gray-600 text-sm mb-2">Write a SQL query to create a database named <strong>"library"</strong>.</p>
+            <pre class="bg-gray-100 text-xs p-2 rounded-md"><code>CREATE DATABASE library;</code></pre>
+          </div>
+        </div>
+
+        <!-- Card 2 - Delete Database -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+          <img src="C:\Users\ankit\OneDrive\Desktop\HTML-5\Task-18\create_Lb2.jpg" alt="Delete Database" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h2 class="text-xl font-semibold mb-2">Delete Database</h2>
+            <p class="text-gray-600 text-sm mb-2">Write a SQL query to delete the database named <strong>"library"</strong>.</p>
+            <pre class="bg-gray-100 text-xs p-2 rounded-md"><code>DROP DATABASE library;</code></pre>
+          </div>
+        </div>
+
+        <!-- Card 3 - Create Table -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+          <img src="C:\Users\ankit\OneDrive\Desktop\HTML-5\Task-18\create_tb.jpg" alt="Create Table" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h2 class="text-xl font-semibold mb-2">Create Table</h2>
+            <p class="text-gray-600 text-sm mb-2">Write a SQL query to create a table named <strong>"book_records"</strong> with columns like:</p>
+            <ul class="list-disc list-inside text-gray-500 text-xs mb-2">
+              <li>Book_Library_No</li>
+              <li>Book_Name</li>
+              <li>Author_Name</li>
+              <li>Book_Edition</li>
+              <li>Price</li>
+            </ul>
+            <pre class="bg-gray-100 text-xs p-2 rounded-md overflow-x-auto"><code>CREATE TABLE book_records (
+  Book_Library_No INT PRIMARY KEY,
+  Book_Name VARCHAR(100),
+  Author_Name VARCHAR(100),
+  Book_Edition VARCHAR(50),
+  Price DECIMAL(10,2)
+);</code></pre>
+          </div>
+        </div>
+
+        <!-- Card 4 - Delete Table -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+          <img src="C:\Users\ankit\OneDrive\Desktop\HTML-5\Task-18\delete_database.jpg" alt="Delete Table" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h2 class="text-xl font-semibold mb-2">Delete Table</h2>
+            <p class="text-gray-600 text-sm mb-2">Write a SQL query to delete the table named <strong>"book_records"</strong>.</p>
+            <pre class="bg-gray-100 text-xs p-2 rounded-md"><code>DROP TABLE book_records;</code></pre>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
